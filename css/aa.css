@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+}
+
+section {
+    height: 100vh;
+}
+
+.cont01 {
+    background-color: rgb(47, 92, 92);
+}
+
+.cont02 {
+    background-color: rgb(62, 105, 78);
+}
+
+.cont03 {
+    background-color: rgb(192, 146, 89);
+}
+
+.cont04 {
+    background-color: blue;
+}
+
+.cont05 {
+    background-color: blueviolet;
+}
