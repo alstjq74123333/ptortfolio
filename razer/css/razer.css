@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #32f502;
+    line-height: 1;
+    background-color: #1C1C1C;
+    font-family: 'Noto Sans KR';
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 🎈🎈🎈 header */
+
+header {
+    color: #A8A8A8;
+}
+header .inner {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+header .inner .top_menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+header .inner .top_menu .user li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+header .inner .top_menu .user li:first-child::before {
+    content: none;
+}
+
+header .inner .top_menu .user li::before {
+    content: '|';
+    padding-right: 5px;
+}
+
+header .inner .down_menu {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .inner .down_menu li {
+    display: inline-block;
+}
+
+header .inner .down_menu .menu li {
+    margin-right: 84px;
+    line-height: 64px;
+}
+
+header .inner .down_menu .r_menu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+header .inner .down_menu .r_menu li {
+    margin-left: 20px;
+}
+
+header .inner .down_menu .r_menu li img{
+    width: 30px;
+}
+
+
+/* 🎈🎈🎈 main_visual */
+
+main .main_visual {
+    margin-bottom: 100px;
+    
+}
+
+main .main_visual figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 🎈🎈🎈 cont01  */
+
+main .cont01 .inner {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+main .cont01 .inner h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+main .cont01 .inner .list .top_item {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .cont01 .inner .list .down_item {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+main .cont01 .inner .list .item {
+    width: 404px;
+}
+
+main .cont01 .inner .list .item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+
+}
+
+main .cont01 .inner .list .item div p {
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+main .cont01 .inner .list .item:hover img {
+    transform: scale(1.2);
+}
+
+main .cont01 .inner .list .item figure {
+    overflow: hidden;
+}
+
+/* 🎈🎈🎈 sub_visual */
+
+main .sub_visual {
+    margin: 200px 0;
+
+}
+
+main .sub_visual img{
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+/* 👏👏👏 cont02  */
+
+main .cont02 {
+    margin-bottom: 200px;
+}
+
+main .cont02 .inner {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+main .cont02 .inner h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+main .cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .cont02 .inner .list .item {
+    width: 297px;
+    height: 583px;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+main .cont02 .inner .list .item figure img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 30px;
+}
+
+main .cont02 .inner .list .item .box {
+    padding: 0 20px;
+}
+
+main .cont02 .inner .list .item .box .top_item {
+    padding-bottom: 15px;
+}
+
+main .cont02 .inner .list .item .box .top_item h5 {
+    font-size: 20px;
+    padding: 15px 0 10px;
+    color: #fff;
+}
+
+main .cont02 .inner .list .item .box .top_item p {
+    color: #c3c3c3;
+}
+
+main .cont02 .inner .list .item .box .bt_item {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #32f502;
+}
+
+main .cont02 .inner .list .item .box .bt_item {
+    color: #fff;
+}
+
+main .cont02 .inner .list .item .box .bt_item p {
+    font-size: 14px;
+}
+
+main .cont02 .inner .list .item .box .bt_item .price {
+    padding-top: 15px;
+}
+
+main .cont02 .inner .list .item .box .bt_item .price h5 {
+    
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+
+/* 👏👏👏 footer */
+footer {
+    border-top: 1px solid #32f502;
+    padding-top: 50px;
+    color: #B0B0B0;
+}
+
+footer .inner {
+    width: 1260px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer .inner .user_ft li a{
+    display: inline-block;
+    padding: 30px 30px 30px 0;
+}
+
+footer .inner .logo_ft li {
+    display: inline-block;
+    padding: 0 10px 10px 0;
+}
+
+footer .inner .logo_ft p:first-of-type {
+    padding: 20px 0;
+}
+
+footer .inner .logo_ft p:last-of-type {
+    padding-bottom: 50px;
+}
+
+footer .inner .logo_ft .sns_logo img{
+    padding-right: 15px;
+}
+
+footer .inner .center_ft p {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+footer .inner .center_ft ul li {
+    padding-bottom: 10px;
+}
+
+footer .inner .r_ft p{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+footer .inner .r_ft  li{
+    padding-bottom: 10px;
+}
+
+footer .inner .r_ft .call ul li:last-child {
+    padding-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
