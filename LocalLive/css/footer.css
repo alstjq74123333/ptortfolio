@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer .fot {
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+footer .fot img{
+    margin-bottom: 25px;
+}
+
+footer .fot p {
+    margin-bottom: 10px;
+}
+
+footer .fot ul li {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+footer .fot ul span {
+    display: inline;
+    padding: 0 10px;
+}
+
+footer .fot p:nth-of-type(2) {
+    margin-bottom: 45px;
+}
