@@ -65,14 +65,64 @@ header .inner .down_menu {
     position: relative;
 }
 
-header .inner .down_menu li {
+header .inner .down_menu .menu {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+
+
+header .inner .down_menu .menu > li {
+    vertical-align: top;
+    position: relative;
+    padding-right: 140px;
+    line-height: 64px;
+}
+
+header .inner .down_menu .menu > li > a {
+    width: 100%;
     display: inline-block;
 }
 
-header .inner .down_menu .menu li {
-    margin-right: 84px;
-    line-height: 64px;
+
+
+
+header .inner .down_menu .menu .menu01:hover .menu02  {
+    display: block;
+
+
 }
+
+header .inner .down_menu .menu .menu02 {
+    
+    
+    background-color: #fff;
+    color: #333;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    
+    display: none;
+}
+
+
+header .inner .down_menu .menu .menu02 li {
+    padding-right: 30px;
+    padding-left: 10px;
+    text-align: left;
+    
+}
+
+header .inner .down_menu .menu .menu02 li > a {
+    display: inline-block;
+}
+
+header .inner .down_menu .menu .menu01 .menu02 li {
+    min-width: 250px;    
+}
+
+
 
 header .inner .down_menu .r_menu {
     position: absolute;
@@ -82,6 +132,7 @@ header .inner .down_menu .r_menu {
 }
 
 header .inner .down_menu .r_menu li {
+    display: inline-block;
     margin-left: 20px;
 }
 
