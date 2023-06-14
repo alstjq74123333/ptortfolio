@@ -14,6 +14,7 @@ $(function(){
     let vem = $('.web .vem');
     let local = $('.web .local');
     let paba = $('.web .paba');
+    let bur = $('.web .bur');
     let songTop = song.offset().top;
     console.log(songTop);
     
@@ -59,7 +60,7 @@ $(function(){
             title.removeClass('off');
         }
 
-        if($('.web .razer').offset().top - 100 <= scrollBar) {
+        if($('.web .razer').offset().top - 50 <= scrollBar) {
             razer.addClass('on');
             header.addClass('on_b');
         }else {
@@ -76,7 +77,7 @@ $(function(){
             header.removeClass('on_f');
         }
 
-        if($('.web .paba').offset().top  <= scrollBar) {
+        if($('.web .paba').offset().top - 50 <= scrollBar) {
             header.removeClass('on_f');
             paba.addClass('on');
             header.addClass('on_g');
@@ -94,7 +95,8 @@ $(function(){
             header.removeClass('on_c');
         }
 
-        if($('.web .vem').offset().top - 100  <= scrollBar) {
+        
+        if($('.web .vem').offset().top - 50  <= scrollBar) {
             header.removeClass('on_c');
             header.addClass('on_d');
             vem.addClass('on');
@@ -102,9 +104,18 @@ $(function(){
             header.removeClass('on_d');
             vem.removeClass('on');
         }
+        
+        if($('.web .bur').offset().top - 50 <= scrollBar) {
+            header.removeClass('on_d');
+            bur.addClass('on');
+            header.addClass('on_h');
+        }else {
+            bur.removeClass('on');
+            header.removeClass('on_h');
+        }
 
         if($('.design').offset().top - 200 <= scrollBar) {
-            header.removeClass('on_d');
+            header.removeClass('on_h');
             header.addClass('on_e');
         }else {
             header.removeClass('on_e');

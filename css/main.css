@@ -42,12 +42,18 @@ header.on_f {
     background-color: #F2FAFA;
     color: #333333;
 }
+
 header.on_g {
     transition: 0.1s;
     background-color: #2C5698;
     color: #fff;
 }
 
+header.on_h {
+    transition: 0.1s;
+    background-color: #FADDB1;
+    color: #333;
+}
 header .inner {
     height: 100%;
     display: flex;
@@ -142,6 +148,20 @@ header.on_g .inner nav ul li:nth-child(2)::before {
     width: 100%;
     height: 20px;
     background-color:#023586;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    /* transform: translateY(-50%); */
+    left: 0;
+    z-index: -2;
+    
+}
+
+header.on_h .inner nav ul li:nth-child(2)::before {
+    content: '';
+    width: 100%;
+    height: 20px;
+    background-color:#D52401;
     border-radius: 10px;
     position: absolute;
     top: 40%;
@@ -959,6 +979,106 @@ header .inner nav ul li:last-child {
     object-fit: cover;
 }
 
+/* ----------------------bur------------------ */
+.web .bur {
+    width: 100%;
+    height: 100vh;
+    
+    background-color: #FADDB1;
+    color: #333;   
+     transform: scale(1); 
+    transition: 1.5s;
+}
+
+.web .bur.on {
+    transition: 1.5s;
+    transform: scale(1.078);
+    border-radius: 0;
+}
+
+.web .bur .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.web .bur .inner .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.web .bur .inner .text h4 {
+    font-size: 3.5rem;
+    margin-bottom: 8rem;
+}
+
+.web .bur .inner .tool p:first-child {
+    font-size: 2rem;
+    text-align: left;
+    color: #D52401;
+}
+
+.web .bur .inner .designer p:first-child { 
+    margin-bottom: 2rem;
+}
+
+.web .bur .inner .tool p:first-child {
+    margin-bottom: 2rem;
+}
+
+.web .bur .inner .tool p:last-child {
+    margin-bottom: 4.5rem;
+    line-height: 1.3;
+}
+
+.web .bur .inner .tool p:last-child {
+    font-size: 2.5rem;
+    text-align: left;
+    color: #D52401;
+}
+
+.web .bur .inner .ui p {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 5rem;
+    line-height: 1.3;
+    color: #D52401;
+}
+.web .bur .inner .tool {}
+
+.web .bur .inner .ui {}
+.web .bur .inner .btn {
+    display: flex;
+    justify-content: flex-start;
+}
+.web .bur .inner .btn div {
+    font-size: 2.5rem;
+    padding: 15px;
+    margin-right: 20px;
+    background-color: #37B52C;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.web .bur .inner .vem_img {
+    width: 100%;
+    
+}
+
+.web .bur .inner .vem_img figure {
+    width: 100%;
+    height: 100%;
+}
+
+.web .bur .inner .vem_img figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ------------------------design-------------------- */
 
 .design .inner h2 {
@@ -1065,6 +1185,11 @@ footer figure {
     }
 
     .web .alcohol.on {
+        transition: 1.5s;
+        transform: scale(1);
+    }
+
+    .web .bur.on {
         transition: 1.5s;
         transform: scale(1);
     }
