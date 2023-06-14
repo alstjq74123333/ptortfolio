@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버거킹</title>
+
+    <link href="css/main.css" rel="stylesheet" />
+    <script>
+        window.onload = function(){
+            //2차메뉴 
+            let menuIcon = document.getElementById('menu_icon');
+            let menuClose = document.getElementById('menu_close');
+            let navMenu = document.getElementsByTagName('nav')[0];
+
+            let i = 0;
+            navMenu.style.display = 'none';
+            
+            menuIcon.onclick = function(){
+                if(navMenu.style.display == 'none'){
+                    navMenu.style.display = 'block';
+                }
+            }
+
+            menuClose.onclick = function(){
+                if(navMenu.style.display == 'block'){
+                    
+                    navMenu.style.display = 'none';
+                }
+            }
+
+
+            // 2차메뉴안에 메뉴
+
+            let depth01 = document.getElementsByClassName('depth01');
+            let depth02 = document.getElementsByClassName('depth02');
+            
+            for(i = 0; i < depth02.length; i++){
+                
+                depth02[i].style.display = 'none';
+            }//for
+
+            //1차메뉴 클릭하면 2차메뉴 나타남
+            for(i = 0; i < depth01.length; i++){
+                //depth01의 직계자식 찾는 방법 children
+                console.log(depth01[i].children);
+                //depth01이 가지는 자식들 중에서 depth02찾기
+                //index값 중에서 1
+                let depth02Children = depth01[i].children[1];
+
+                depth01[i].onclick = function(){
+                    if(depth02Children.style.display == 'none'){
+                        depth02Children.style.display = 'block'; 
+                    }else{
+                        depth02Children.style.display = 'none';
+                    }
+                }
+            }//for end
+
+           
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="hd_logo">
+                <div id="menu_icon">
+                  <a href="#"><img src="img/menu.png" alt="메뉴버튼" /></a>
+                </div><!-- #menu_icon -->
+                <div class="logo">
+                    <h1><a href="#"><img src="img/logo 1.png" alt="메인로고" /></a></h1>
+                </div><!-- .logo end -->
+                <div class="shoping">
+                    <a href="#"><img src="img/shoping.png" alt="쇼핑버튼" /></a>
+                </div><!-- .shoping end -->
+            </div><!-- hd_logo -->
+
+            <nav>
+                <div id="menu_close">
+                    <figure><img src="img/menu_close.png" alt="닫기버튼" /></figure>
+                </div><!-- #menu_close end -->
+                <ul>
+                    <li class="depth01">
+                        <a href="#">메뉴소개</a>
+                        <ul class="depth02">
+                            <li><a href="#">스페셜&할인팩</a></li>
+                            <li><a href="#">신제품(NEW)</a></li>
+                            <li><a href="#">프리미엄</a></li>
+                            <li><a href="#">와퍼&주니어</a></li>
+                            <li><a href="#">치킨&슈림프버거</a></li>
+                            <li><a href="#">올데이킹&킹모닝</a></li>
+                            <li><a href="#">사이드</a></li>
+                            <li><a href="#">음료&디저트</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#">매장소개</a>
+                        <ul class="depth02">
+                            <li><a href="#">가까운 매장</a></li>
+                            <li><a href="#">지역 검색</a></li>
+                            <li><a href="#">매장명 검색</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">약관 및 정책</a>
+                        <ul class="depth02">
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">법적고지</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+                        <a href="#">고객센터</a>
+                        <ul class="depth02">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">앱 이용안내</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">문의</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                </ul>
+                <div class="event">
+                    <h3>이벤트</h3>
+                    <div class="list">
+                        <div class="item">
+                            <figure>
+                                <a href="#"> <img src="img/main_visual 3.jpg" alt="이벤트 이미지" /></a>
+                            </figure>
+                        </div><!-- .item end -->
+                        <div class="item">
+                            <figure>
+                                <a href="#"> <img src="img/main_visual03 1.jpg" alt="이벤트 이미지" /></a>
+                            </figure>
+                        </div><!-- .item end -->
+                    </div><!-- .list end -->
+                </div><!-- event end -->
+
+                <footer>
+
+                    <div class="sns_box">
+                        <lu class="sns_icon">
+                            <li><a href="#"><img src="img/Vector-1.png" alt="페이스북" /></a></li>
+                            <li><a href="#"><img src="img/Vector-2.png" alt="페이스북" /></a></li>
+                            <li><a href="#"><img src="img/Vector-3.png" alt="페이스북" /></a></li>
+                        </lu><!-- .sns_icon end -->
+                    </div><!-- sns_icon end -->
+                    <ul class="ft">
+                        <li>서울 종로구 삼봉로 71 G 타워 2층 주식회사 비케이알</li>
+                        <li>전화주문 1599-0505</li>
+                        <li>사업자 등록번호 101-86-76277 | (주)BKR 대표 이사 문영주, 이동형</li>
+                        <li>Copyright 2019 BKR Co., Ltd. All right Reserved</li>
+                    </ul><!-- ft end -->
+
+                </footer>
+            </nav>
+        </div><!-- .inner end -->
+    </header>
+
+    <section class="cont01">
+        <div class="inner">
+            <div class="member">
+                <div class="text">
+                    <h3>Membership</h3>
+                    <p>멤머십 전용혜택과 특사 쿠폰을</br>
+                        지금 바로 확인하세요.</p>
+                </div>
+                <div class="barcode">
+                    <img src="img/icons8-barcode-30.png" alt="바코드" />
+                </div><!-- barcodee end -->
+            </div><!-- member end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont01 end -->
+
+    <section class="main_visual">
+        <figure>
+            <img src="img/Mask group.jpg" alt="메인비주얼" />
+        </figure>
+    </section><!-- .main_visual end -->
+
+    <section class="cont02">
+        <div class="inner">
+            <div class="list">
+                <a href="#">
+                    <div class="left_red">
+                        <h4>킹오더</h4>
+                        <p>매장에 미리 주문</p>
+                    </div><!-- left_red end -->
+                </a>
+                <a href="#">
+                    <div class="right_green">
+                        <h4>딜리버리</h4>
+                        <p>문 앞까지 배달</p>
+                    </div><!-- right_green end -->
+                </a>
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont02 end -->
+    <section class="cont03">
+        <div class="inner">
+            <h3>IT's NEW</h3>
+            <div id="l_arow">
+                <img src="img/Vector-4.png" alt="이전버튼" />
+            </div><!-- #l_arow end -->
+            <div id="r_arow">
+                <img src="img/Vector-5.png" alt="다음버튼" />
+            </div><!-- #r_arow end -->
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/new01 1.jpg" alt="스모키 바비큐 와퍼" />
+                    </figure>
+                    <div class="text">
+                        <p>스모키 바비큐</br>와퍼</p>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/new02 1.jpg" alt="스모키 바비큐 X" />
+                    </figure>
+                    <div class="text">
+                        <p>스모키 바비큐 X</p>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/new03 1.jpg" alt="치킨킹 BLT" />
+                    </figure>
+                    <div class="text">
+                        <p>치킨킹 BLT</p>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+            </div><!-- .list end -->
+            <div class="list on">
+                <div class="item">
+                    <figure>
+                        <img src="img/new04 1.jpg" alt="치킨킹" />
+                    </figure>
+                    <div class="text">
+                        <p>치킨킹</p>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/new05 1.jpg" alt="BLT오물렛 킹모닝" />
+                    </figure>
+                    <div class="text">
+                        <p>BLT오물렛</br>킹모닝</p>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+                <div class="item">
+                    <figure>
+                        <img src="img/new06 1.jpg" alt="오물렛킹모닝" />
+                    </figure>
+                    <div class="text">
+                        <p>오물렛킹모닝</p>
+                    </div><!-- text end -->
+                </div><!-- item end -->
+            </div><!-- .list end -->
+        </div><!-- inner end -->
+    </section><!-- .cont03 end -->
+
+    <section class="cont04">
+        <div class="inner">
+            <div class="list">
+                <div class="item">
+                    <img src="img/icons8-집-40 1.png" alt="홈버튼" />
+                    <p>홈</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <img src="img/icons8-절단-쿠폰-40 1.png" alt="쿠폰 버튼" />
+                    <p>쿠폰</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <img src="img/icons8-burger-40 1.png" alt="주문 버튼" />
+                    <p>주문</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <img src="img/icons8-왕관-40 1.png" alt="MY킹 버튼" />
+                    <p>MY킹</p>
+                </div><!-- item end -->
+                <div class="item">
+                    <img src="img/more.png" alt="더보기 버튼" />
+                    <p>더보기</p>
+                </div><!-- item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont04 end -->
+</body>
+
+</html>
