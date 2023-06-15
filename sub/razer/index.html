@@ -6,10 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이저스토어</title>
+
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <link href="css/razer.css" rel="stylesheet" />
 
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="lib/jquery-3.7.0.min.js"></script>
-    <script src="js/main.js"></script>
+
+    <script src="js/sub_razer.js"></script>
 </head>
 
 <body>
@@ -30,14 +38,14 @@
             <div class="down_menu">
                 <ul class="menu">
                     <li class="menu01">
-                        <a href="sub/mouse/index.html">마우스</a>
+                        <a href="sub/mouse/index.html" target="_blank">마우스</a>
                         <ul class="menu02">
-                            <li><a href="#">Razer Viper</a></li>
-                            <li><a href="#">Razer Basilisk</a></li>
-                            <li><a href="#">Razer DeathAdder</a></li>
-                            <li><a href="#">Razer Pro</a></li>
-                            <li><a href="#">Razer Naga</a></li>
-                            <li><a href="#">Razer Orochi</a></li>                                      
+                            <li><a href="sub/mouse/index.html" target="_blank">Razer Viper</a></li>
+                            <li><a href="sub/mouse/index.html" target="_blank">Razer Basilisk</a></li>
+                            <li><a href="sub/mouse/index.html" target="_blank">Razer DeathAdder</a></li>
+                            <li><a href="sub/mouse/index.html" target="_blank">Razer Pro</a></li>
+                            <li><a href="sub/mouse/index.html" target="_blank">Razer Naga</a></li>
+                            <li><a href="sub/mouse/index.html" target="_blank">Razer Orochi</a></li>
                         </ul><!-- .menu02 end -->
                     </li><!-- .menu01 end -->
                     <li class="menu01">
@@ -104,9 +112,23 @@
 
     <main>
         <section class="main_visual">
-            <figure>
-                <img src="img/mainvisual.gif" alt="" />
-            </figure>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="img/main01.jpg" alt="메인비쥬얼" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="img/main02.jpg" alt="메인비쥬얼" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="img/main03.jpg" alt="메인비쥬얼" /></a>
+                    </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <div class="swiper-pagination"></div>
+            </div>
         </section><!-- .main_visual end -->
 
         <section class="cont01">
@@ -115,10 +137,10 @@
                 <div class="list">
                     <div class="top_item">
                         <div class="item">
-                            <a href="sub/mouse/index.html">
+                            <a href="sub/mouse/index.html" target="_blank">
                                 <figure>
-                                <img src="img\mou.jpg" alt="" />
-                            </figure>
+                                    <img src="img\mou.jpg" alt="" />
+                                </figure>
                                 <div>
                                     <p>MICE</p>
                                 </div>
@@ -127,8 +149,8 @@
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                <img src="img/keybord.jpg" alt="" />
-                            </figure>
+                                    <img src="img/keybord.jpg" alt="" />
+                                </figure>
                                 <div>
                                     <p>KEYBOARDS</p>
                                 </div>
@@ -137,8 +159,8 @@
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                <img src="img/headset.jpg" alt="" />
-                            </figure>
+                                    <img src="img/headset.jpg" alt="" />
+                                </figure>
                                 <div>
                                     <p>AUDIO</p>
                                 </div>
@@ -149,8 +171,8 @@
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                <img src="img/pad.jpg" alt="" />
-                            </figure>
+                                    <img src="img/pad.jpg" alt="" />
+                                </figure>
                                 <div>
                                     <p>MATS</p>
                                 </div>
@@ -159,8 +181,8 @@
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                <img src="img/accesori.jpg" alt="" />
-                            </figure>
+                                    <img src="img/accesori.jpg" alt="" />
+                                </figure>
                                 <div>
                                     <p>ACCESSORIES</p>
                                 </div>
@@ -169,8 +191,8 @@
                         <div class="item">
                             <a href="#">
                                 <figure>
-                                <img src="img/ctrler.jpg" alt="" />
-                            </figure>
+                                    <img src="img/ctrler.jpg" alt="" />
+                                </figure>
                                 <div>
                                     <p>CONTROLLER</p>
                                 </div>
@@ -181,11 +203,11 @@
             </div><!-- .inner end -->
         </section><!-- .cont01 end -->
 
-        <section class="sub_visual">
+        <!--    <section class="sub_visual">
 
             <img src="img/nsn.jpg" alt="" />
 
-        </section><!-- .sub_visual end -->
+        </section> --><!-- .sub_visual end -->
 
         <section class="cont02">
             <div class="inner">
@@ -196,104 +218,104 @@
                             <a href="#"><img src="img/rev01.jpg" alt="" /></a>
                         </figure>
                         <div class="box">
-                        <div class="top_item">
-                            <img src="img/icon_star_fill.png" alt="" />
+                            <div class="top_item">
+                                <img src="img/icon_star_fill.png" alt="" />
+                                <a href="#">
+                                    <h5>골리아투스 익스텐디드 크로...</h5>
+                                    <p>골리아투스 익스텐디드 크로마에서 업
+                                        그레이드 했습니다. 기존제품과 재질차
+                                        이가 확실히 틀린데 써봐야 알 것...
+                                    </p>
+                                </a>
+                            </div><!-- .top_item end -->
                             <a href="#">
-                            <h5>골리아투스 익스텐디드 크로...</h5>
-                            <p>골리아투스 익스텐디드 크로마에서 업
-                                그레이드 했습니다. 기존제품과 재질차
-                                이가 확실히 틀린데 써봐야 알 것...
-                            </p>
-                        </a>
-                        </div><!-- .top_item end -->
-                            <a href="#">
-                            <div class="bt_item">
-                                <img src="img/revitem.jpg" alt="" />
-                                <div class="price">
-                                <p>RAZER 스트라이더 크로마...</p>
-                                <h5>199,000원</h5>
-                            </div><!-- .price end -->
-                            </div><!-- bt_item end -->
-                        </a>
-                    </div><!-- box end -->
+                                <div class="bt_item">
+                                    <img src="img/revitem.jpg" alt="" />
+                                    <div class="price">
+                                        <p>RAZER 스트라이더 크로마...</p>
+                                        <h5>199,000원</h5>
+                                    </div><!-- .price end -->
+                                </div><!-- bt_item end -->
+                            </a>
+                        </div><!-- box end -->
                     </div><!-- .item end -->
                     <div class="item">
                         <figure>
                             <a href="#"><img src="img/rev02.jpg" alt="" /></a>
                         </figure>
                         <div class="box">
-                        <div class="top_item">
-                            <img src="img/icon_star_fill.png" alt="" />
+                            <div class="top_item">
+                                <img src="img/icon_star_fill.png" alt="" />
+                                <a href="#">
+                                    <h5>뒤늦게 쓰는 후기 너무 이뻐요!</h5>
+                                    <p>뒤늦게 쓰는 후기 너무 이뻐요!! 키보드
+                                        대해서 잘 모르지만 타건소리 좋아해서
+                                        몇 개 사게 됬었어여 ㅋㅋ...
+                                    </p>
+                                </a>
+                            </div><!-- .top_item end -->
                             <a href="#">
-                            <h5>뒤늦게 쓰는 후기 너무 이뻐요!</h5>
-                            <p>뒤늦게 쓰는 후기 너무 이뻐요!! 키보드
-                                대해서 잘 모르지만 타건소리 좋아해서
-                                몇 개 사게 됬었어여 ㅋㅋ...
-                            </p>
-                        </a>
-                        </div><!-- .top_item end -->
-                        <a href="#">
-                            <div class="bt_item">
-                                <img src="img/revitem02.jpg" alt="" />
-                                <div class="price">
-                                <p>레이저코리아 RAZER 프로...</p>
-                                <h5>219,000원</h5>
-                            </div><!-- price end -->
-                            </div><!-- bt_item end -->
-                        </a>
-                    </div><!-- box end -->
+                                <div class="bt_item">
+                                    <img src="img/revitem02.jpg" alt="" />
+                                    <div class="price">
+                                        <p>레이저코리아 RAZER 프로...</p>
+                                        <h5>219,000원</h5>
+                                    </div><!-- price end -->
+                                </div><!-- bt_item end -->
+                            </a>
+                        </div><!-- box end -->
                     </div><!-- .item end -->
                     <div class="item">
                         <figure>
                             <a href="#"><img src="img/rev03.jpg" alt="" /></a>
                         </figure>
                         <div class="box">
-                        <div class="top_item">
-                            <img src="img/icon_star_fill.png" alt="" />
+                            <div class="top_item">
+                                <img src="img/icon_star_fill.png" alt="" />
+                                <a href="#">
+                                    <h5>직접 보니까 그립감 좋고 핑...</h5>
+                                    <p>직접 보니까 그립감 좋고 핑크가 이쁘
+                                        네요. 케이스도 이뻐요. 유선 무선 둘
+                                        다 쓸 수 있어서 좋고 게임 할 때...
+                                    </p>
+                                </a>
+                            </div><!-- top_item end -->
                             <a href="#">
-                            <h5>직접 보니까 그립감 좋고 핑...</h5>
-                            <p>직접 보니까 그립감 좋고 핑크가 이쁘
-                                네요. 케이스도 이뻐요. 유선 무선 둘
-                                다 쓸 수 있어서 좋고 게임 할 때...
-                            </p>
-                        </a>
-                        </div><!-- top_item end -->
-                        <a href="#">
-                            <div class="bt_item">
-                                <img src="img/revitem03.jpg" alt="" />
-                                <div class="price">
-                                <p>레이저코리아 RAZER 바이퍼...</p>
-                                <h5>169,000원</h5>
-                            </div><!-- .price end -->
-                            </div><!-- bt_item end -->
-                        </a>
-                    </div><!-- box end -->
+                                <div class="bt_item">
+                                    <img src="img/revitem03.jpg" alt="" />
+                                    <div class="price">
+                                        <p>레이저코리아 RAZER 바이퍼...</p>
+                                        <h5>169,000원</h5>
+                                    </div><!-- .price end -->
+                                </div><!-- bt_item end -->
+                            </a>
+                        </div><!-- box end -->
                     </div><!-- .item end -->
                     <div class="item">
                         <figure>
                             <a href="#"><img src="img/rev04.jpg" alt="" /></a>
                         </figure>
                         <div class="box">
-                        <div class="top_item">
-                            <img src="img/icon_star_fill.png" alt="" />
+                            <div class="top_item">
+                                <img src="img/icon_star_fill.png" alt="" />
+                                <a href="#">
+                                    <h5>너무 좋아요 일단 감성이...</h5>
+                                    <p>너무 좋아요 일단 감성이 미쳤습니다
+                                        윤활제품이라그런지 타건감도 장난아
+                                        니네요... 스테빌 철심소리...
+                                    </p>
+                                </a>
+                            </div><!-- .top_item end -->
                             <a href="#">
-                            <h5>너무 좋아요 일단 감성이...</h5>
-                            <p>너무 좋아요 일단 감성이 미쳤습니다
-                                윤활제품이라그런지 타건감도 장난아
-                                니네요... 스테빌 철심소리...
-                            </p>
-                        </a>
-                        </div><!-- .top_item end -->
-                        <a href="#">
-                            <div class="bt_item">
-                                <img src="img/revitem04.jpg" alt="" />
-                                <div class="price">
-                                <p>레이저코리아 RAZER 블랙...</p>
-                                <h5>349,000원</h5>
-                            </div><!-- .price end -->
-                            </div><!-- bt_item end -->
-                        </a>
-                    </div><!-- box end -->
+                                <div class="bt_item">
+                                    <img src="img/revitem04.jpg" alt="" />
+                                    <div class="price">
+                                        <p>레이저코리아 RAZER 블랙...</p>
+                                        <h5>349,000원</h5>
+                                    </div><!-- .price end -->
+                                </div><!-- bt_item end -->
+                            </a>
+                        </div><!-- box end -->
                     </div><!-- .item end -->
                 </div><!-- .list end -->
             </div><!-- .inner end -->
@@ -310,20 +332,20 @@
                         <li><a href="#">이용안내</a></li>
                     </ul><!-- user_ft end -->
                     <div class="down_ft">
-                    <ul>
-                        <li>(주)웹툰샵</li>
-                        <li>대표. 이미연</li>
-                        <li>TEL. 1661-4702</li>
-                        <li>사업자등록번호. 108-81-82324</li>
-                    </ul>
-                    <ul>
-                        <li>주소. 경기도 성남시 중원구 둔촌대로 484(상대원동) 시콕스타워 322호</li>
-                    </ul>
-                    <ul>
-                        <li>통신판매신고번호. 제2015-경기성남-0536호</li>
-                        <li>개인정보취급관리자. 서다혜</li>
-                    </ul>
-                </div><!-- down_ft end -->
+                        <ul>
+                            <li>(주)웹툰샵</li>
+                            <li>대표. 이미연</li>
+                            <li>TEL. 1661-4702</li>
+                            <li>사업자등록번호. 108-81-82324</li>
+                        </ul>
+                        <ul>
+                            <li>주소. 경기도 성남시 중원구 둔촌대로 484(상대원동) 시콕스타워 322호</li>
+                        </ul>
+                        <ul>
+                            <li>통신판매신고번호. 제2015-경기성남-0536호</li>
+                            <li>개인정보취급관리자. 서다혜</li>
+                        </ul>
+                    </div><!-- down_ft end -->
                     <p>© 2012-2021 레이저스토어 all rights reserved.</p>
                     <p>‘레이저스토어’는 등록상표입니다.</p>
                     <div class="sns_logo">

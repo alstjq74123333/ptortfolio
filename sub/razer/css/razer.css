@@ -90,7 +90,10 @@ header .inner .down_menu .menu > li > a {
 
 header .inner .down_menu .menu .menu01:hover .menu02  {
     display: block;
-
+    position: absolute;
+    top: 64px;
+    left: 0;
+    z-index: 99;
 
 }
 
@@ -145,12 +148,19 @@ header .inner .down_menu .r_menu li img{
 
 main .main_visual {
     margin-bottom: 100px;
-    
+}
+
+main .main_visual figure {
+    width: 100%;
 }
 
 main .main_visual figure img {
     width: 100%;
     object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    background-color: #32f502;
 }
 
 /* 🎈🎈🎈 cont01  */
@@ -209,7 +219,7 @@ main .cont01 .inner .list .item figure {
 
 /* 🎈🎈🎈 sub_visual */
 
-main .sub_visual {
+/* main .sub_visual {
     margin: 200px 0;
 
 }
@@ -218,7 +228,9 @@ main .sub_visual img{
     width: 100%;
     object-fit: cover;
     
-}
+} */
+
+
 
 /* 👏👏👏 cont02  */
 
@@ -235,6 +247,7 @@ main .cont02 .inner h3 {
     font-size: 35px;
     text-align: center;
     margin-bottom: 60px;
+    margin-top: 100px;
 }
 
 main .cont02 .inner .list {
@@ -303,6 +316,7 @@ main .cont02 .inner .list .item .box .bt_item .price h5 {
 
 /* 👏👏👏 footer */
 footer {
+    background-color: #1c1c1c;
     border-top: 1px solid #32f502;
     padding-top: 50px;
     color: #B0B0B0;
