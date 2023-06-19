@@ -44,10 +44,9 @@
 
             //1차메뉴 클릭하면 2차메뉴 나타남
             for(i = 0; i < depth01.length; i++){
-                //depth01의 직계자식 찾는 방법 children
+                
                 console.log(depth01[i].children);
-                //depth01이 가지는 자식들 중에서 depth02찾기
-                //index값 중에서 1
+                
                 let depth02Children = depth01[i].children[1];
 
                 depth01[i].onclick = function(){
