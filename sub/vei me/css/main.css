@@ -14,7 +14,6 @@ header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 수직정렬 시킬 때 height값 필수!! */
 }
 
 header .inner h1 a img {
@@ -60,9 +59,6 @@ header .inner .pc ul.gnb li {
 
 .main_visual figure:first-child {
     width: 55.88%;
-    /* width: 1073 / 1920(현재캠퍼스 크기) * 100 */
-    /* height 값을 작성하면 height값 만큼 이미지가 잡히게된다.
-        height값을 작성하지 않으면 width 크기에 맞춰서 자동으로 맞추어진다. */
 }
 
 
@@ -85,8 +81,6 @@ header .inner .pc ul.gnb li {
 
 
 /* -----------------------.vie----------------------- */
-
-/* 각각의 아이템들의 크기를 먼저 구하고 정렬시키기 */
 
 .vie .inner {
     display: flex;
@@ -121,14 +115,8 @@ header .inner .pc ul.gnb li {
 .vie .inner  > div.title {
     
     background: url(../img/vie_text_img.jpg) center center / cover no-repeat;
-    /* background-image: url주소만 작성가능 */
     display: flex;
-    flex-direction: column;
-    /* 자식들의 공간이 남아도
-    세로로 나열시켜주는 역할 
-    justify-content: 수직;
-    align-items: 수평;
-    반대로 바뀌게 된다.*/
+    flex-direction: column
     justify-content: center;
     text-align: center;
 }
@@ -294,8 +282,7 @@ header .inner .pc ul.gnb li {
 
 .best .inner .best_slide_cont figure {
     max-height: 442px;
-    height: 32.5vw;
-    /* height 값은 %로 설정할수가 없다  */
+    height: 32.5vw
 }
 
 .best .inner .best_slide_cont figure img {
@@ -881,7 +868,6 @@ header .inner .pc ul.gnb li {
     .brand .inner .list > div.list_item figure {
         /* width : calc(전체 / 2 - 7.5px) */
         width: calc(100% / 2 - 7.5px);
-        /* height : auto 로 쓰여도 되지만 , 처음부터 vw 값으로 설정하는 것이 좋다. */
         height: auto;
     }
 
@@ -903,8 +889,6 @@ header .inner .pc ul.gnb li {
         height: 250px;
         width: calc(100% - 40px);
         margin: 0 auto;
-        /* 아래 세션과 같이 올라가서 공백이 없다 */
-        /* position top 값으로 올린다면 이미지만 올라가서 아래쪽에 공백이 생긴다. */
         margin-top: -50px;
         position: relative;
         z-index: 99;
@@ -915,7 +899,6 @@ header .inner .pc ul.gnb li {
         width: 100%;
         position: static;
         background-color: #995727;
-        /* 이전에 썻던 속성값을 삭제시키지 못하기때문에 속성값을 원래 기본값으로 변경시킬수있다 */
         transform: translateY(0);
     }
 
@@ -1010,7 +993,6 @@ footer .inner .f_info ul:nth-child(2){
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;
     padding: 0 7.27%;
-    /* 99px -> 99 / 1360 * 100 = 7.2% */
     margin-right: 7.27%;
 }
 
