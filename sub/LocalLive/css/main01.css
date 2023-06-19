@@ -1,8 +1,6 @@
 @charset "uft-8" ;
 
-/* 폰트연결
-    url 안에 https:// 를 넣어주어야한다. 
-    안그럼 로딩 속도가 느려진다. */
+/* 폰트연결 */
 @font-face {
  font-family: 'NanumBarunGothic';
  font-style: normal;
